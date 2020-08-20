@@ -79,14 +79,14 @@
             {% elif LOGO %}
             <a href="/"><img src="{{ SITEURL }}/images/{{ LOGO }}" alt="McManus Logo"></a>
             {% else %}
-            <h1><a href="/">{{ FIRST_NAME }}'s Blog</a></h1>
+            <h1><a href="/">SchaakStudieSpinselS 2</a></h1>
             {% endif %}
             <a href="#menu" id="menu-link">more stuff</a>
             <nav id="menu">
                 <ul>
                     {% if DISPLAY_PAGES_ON_MENU %}
                       {% for p in pages %}
-                        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.slug }}</a></li>
+                        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                       {% endfor %}
                     {% endif %}
                     {% for title, link in MENUITEMS %}
