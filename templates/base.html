@@ -67,6 +67,14 @@
                     });
             };
         </script>
+        <!-- page specific css -->
+        {% if page %}
+            {% if page.stylesheets %}
+                {% for stylesheet in page.stylesheets %}
+        {{ stylesheet }}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
         {% endblock head %}
 </head>
 <body>
@@ -143,5 +151,14 @@
                 </footer>
         {% endblock footer %}
         </div>
+
 </body>
+<!-- for page specific javascript -->
+{% if page %}
+{% if page.javascripts %}
+    {% for javascript in page.javascripts %}
+{{ javascript }}
+    {% endfor %}
+{% endif %}
+{% endif %}
 </html>
